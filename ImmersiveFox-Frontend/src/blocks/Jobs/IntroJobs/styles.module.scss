@@ -1,0 +1,39 @@
+@import "../../../scss/repeat.scss";
+@import "../../../scss/vars.scss";
+
+.intro {
+  padding: 56px 0 120px;
+  background-color: $black;
+  &__values {
+    @extend %alignCenter;
+    justify-content: space-between;
+    margin-top: 52px;
+  }
+  &__side {
+    width: 410px;
+  }
+  &__union {
+    width: 438px;
+    margin: 0 15px;
+  }
+  &__slaider {
+    margin-top: 24px;
+    display: none;
+    &Union {
+      width: 288px;
+      margin: 0 auto 16px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .intro {
+    padding: 30px 0 60px;
+    &__values {
+      display: none;
+    }
+    &__slaider {
+      display: block;
+    }
+  }
+}

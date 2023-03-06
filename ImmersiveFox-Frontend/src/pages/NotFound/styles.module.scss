@@ -1,0 +1,11 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.notFound {
+  height: calc(100vh - 104px);
+  @extend %flexCenter;
+  @extend %blackBold;
+  font-size: 32px;
+  color: $white;
+  text-transform: uppercase;
+}

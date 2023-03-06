@@ -1,0 +1,52 @@
+.input-axis {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.input-axis input {
+    margin: 2px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    font-size: large;
+    border-color: #191a51;
+}
+
+.draggable-wrap {
+    cursor: move;
+    z-index: 1;
+}
+
+.draggable {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.resizable-point {
+    width: 12px; 
+    height: 12px;
+    background-color: #fff;
+    border: 3px solid #FE6338;
+    border-radius: 50%;
+    position: absolute; 
+}
+
+.avatar-inner-bounds{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.avatar-inner-bounds img{
+    width: auto;
+    height: 100%;
+}

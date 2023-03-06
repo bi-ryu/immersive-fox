@@ -1,0 +1,67 @@
+@import "./vars.scss";
+
+%blackBold {
+  font-weight: 700;
+  color: $black;
+}
+
+%whiteBold {
+  font-weight: 700;
+  color: $white;
+}
+
+%whiteSemiBold {
+  font-weight: 600;
+  color: $white;
+}
+
+%blurMain {
+  mix-blend-mode: normal;
+  backdrop-filter: blur(100px);
+}
+
+%button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+%input {
+  outline: none;
+  border: none;
+}
+
+%center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+%alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%full {
+  width: 100%;
+  height: 100%;
+}
+
+%fullPosition {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

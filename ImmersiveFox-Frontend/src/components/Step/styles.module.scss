@@ -1,0 +1,59 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.step {
+  width: 100%;
+  padding: 25px 56px 22px 32px;
+  background-color: rgba(#fff, 0.14);
+  @extend %blurMain;
+  border-radius: 80px;
+  @extend %alignCenter;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__photo {
+    min-width: 96px;
+    height: 96px;
+    svg {
+      @extend %full;
+    }
+  }
+  &__content {
+    margin-left: 17px;
+    color: $white;
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 16px;
+      color: $white8;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .step {
+    border-radius: 0;
+    padding: 16px;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &__photo {
+      max-width: 64px;
+      min-width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .step {
+    &__content {
+      margin-left: 8px;
+    }
+  }
+}

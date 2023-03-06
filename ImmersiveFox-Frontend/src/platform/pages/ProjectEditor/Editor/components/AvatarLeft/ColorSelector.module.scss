@@ -1,0 +1,41 @@
+.custom_color_picker {
+    width: 320px;
+    height: auto;
+    background: #22262f;
+    padding: 5px 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+
+    &__github_picker {
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: unset !important;
+        border-radius: unset !important;
+        margin-top: 10px;
+    }
+    &__wrap {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        div {
+            flex: 0 0 42%;
+            color: white;
+        }
+
+        span {
+            color: white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        button {
+            background: transparent;
+            border: unset;
+            cursor: pointer;
+        }
+    }
+}

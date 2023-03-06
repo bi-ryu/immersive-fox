@@ -1,0 +1,54 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.case {
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  &__title {
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    color: $white;
+    line-height: 24px;
+    padding-left: 23px;
+    margin-bottom: 8px;
+    svg {
+      position: absolute;
+      top: 4px;
+      left: 0;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: $white;
+    line-height: 24px;
+    white-space: pre-line;
+  }
+}
+
+@media (max-width: 1350px) {
+  .case {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .case {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .case {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

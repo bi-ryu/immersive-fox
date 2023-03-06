@@ -1,0 +1,84 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.input {
+  position: relative;
+  width: 100%;
+  input {
+    @extend %input;
+    width: 100%;
+    padding: 0 10px;
+    background-color: transparent;
+    font-size: 24px;
+    color: $white;
+    line-height: 36px;
+    &::placeholder {
+      color: $white4;
+      text-align: center;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    width: 1px;
+    height: 8px;
+    clip-path: polygon(0.5px 0px, 0 100%, 100% 100%, 100% 0);
+    background-color: $white;
+  }
+  &.error::before,
+  &.error::after {
+    background-color: $red;
+  }
+
+  &__error {
+    position: absolute;
+    font-size: 12px;
+    color: $red;
+  }
+}
+
+@media (max-width: 780px) {
+  .input {
+    input {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &__error {
+      bottom: -30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .input {
+    input {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 10px 0 0;
+      &::placeholder {
+        text-align: left;
+      }
+    }
+    &::after {
+      bottom: -4px;
+    }
+    &::before {
+      bottom: -4px;
+    }
+    &__error {
+      bottom: -24px;
+    }
+  }
+}

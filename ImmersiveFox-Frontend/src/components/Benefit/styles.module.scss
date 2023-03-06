@@ -1,0 +1,108 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.benefit {
+  width: 324px;
+  padding: 24px 40px;
+  background-color: $white14;
+  @extend %blurMain;
+  border-radius: 80px;
+  margin: 0 auto;
+  z-index: 5;
+  &.absolute {
+    position: absolute;
+  }
+  svg {
+    position: absolute;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+    line-height: 24px;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &.1 {
+    bottom: 216px;
+    left: -90px;
+    svg {
+      right: 22px;
+      top: 15px;
+    }
+  }
+  &.2 {
+    bottom: 60px;
+    left: 80px;
+    svg {
+      right: 40px;
+      top: 5px;
+    }
+  }
+  &.3 {
+    top: 105px;
+    right: -100px;
+    svg {
+      right: 28px;
+      top: 0px;
+    }
+  }
+  &.4 {
+    top: 260px;
+    right: 30px;
+    svg {
+      left: 20px;
+      top: 2px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .benefit {
+    &.1 {
+      bottom: 216px;
+      left: 20px;
+    }
+    &.3 {
+      top: 15px;
+      right: 15px;
+    }
+    &.4 {
+      top: 260px;
+      right: 70px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .benefit {
+    &.2 {
+      left: 50px;
+    }
+    &.4 {
+      top: 200px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .benefit {
+    height: 120px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    svg {
+      top: 14px !important;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .benefit {
+    width: 100%;
+    padding: 24px;
+  }
+}

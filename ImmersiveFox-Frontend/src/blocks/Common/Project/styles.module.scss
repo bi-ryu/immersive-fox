@@ -1,0 +1,150 @@
+@import "../../../scss/repeat.scss";
+@import "../../../scss/vars.scss";
+
+.project {
+  padding: 250px 0 160px;
+  background: linear-gradient(
+      236.19deg,
+      #ffb800 -32.3%,
+      rgba(255, 168, 0, 0) 82.88%
+    ),
+    #fe6338;
+  clip-path: polygon(0 90px, 0 100%, 100% 100%, 100% 0);
+  margin-top: -90px;
+  &__wrapper {
+    @extend %flexColumn;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+    h2 {
+      @extend %blackBold;
+      font-size: 40px;
+      color: $white;
+      line-height: 60px;
+      margin-top: 8px;
+    }
+  }
+  &__form {
+    @extend %alignCenter;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  &__input {
+    @extend %alignCenter;
+    font-size: 24px;
+    color: $white;
+    line-height: 36px;
+  }
+  .or {
+    position: relative;
+    width: 88px;
+    font-size: 24px;
+    color: $white8;
+    line-height: 36px;
+    text-align: center;
+    margin: 34px 0;
+    svg {
+      position: absolute;
+      @extend %center;
+    }
+  }
+
+  .input {
+    margin: 0 14px;
+  }
+  .input_1 {
+    width: 290px;
+  }
+  .input_2 {
+    width: 500px;
+  }
+  .input_3 {
+    width: 415px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .project {
+    .input {
+      margin: 0 8px;
+    }
+    .input_1 {
+      width: 240px;
+    }
+    .input_2 {
+      width: 400px;
+    }
+    .input_3 {
+      width: 380px;
+    }
+  }
+}
+
+@media (max-width: 1130px) {
+  .project {
+    padding: 150px 0 100px;
+    clip-path: polygon(0 60px, 0 100%, 100% 100%, 100% 0);
+
+    &__form {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &__input {
+      width: 100%;
+      white-space: nowrap;
+      margin-bottom: 50px;
+    }
+    .input {
+      margin: 0 16px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .project {
+    padding: 70px 0 40px;
+    clip-path: polygon(0 20px, 0 100%, 100% 100%, 100% 0);
+    &__input {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    &__wrapper {
+      align-items: flex-start;
+    }
+    &__title {
+      text-align: left;
+      margin-bottom: 18px;
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    &__input {
+      flex-wrap: wrap;
+      align-items: flex-end;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 22px;
+      p {
+        width: 100%;
+      }
+    }
+    .or {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 30px 0;
+    }
+    .input {
+      width: 97%;
+      margin: 8px 0 0;
+    }
+  }
+}

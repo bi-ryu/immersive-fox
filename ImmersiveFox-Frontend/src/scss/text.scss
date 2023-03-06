@@ -1,0 +1,33 @@
+@import "./vars.scss";
+@import "./repeat.scss";
+
+%bodyRegular {
+  font-weight: 400;
+  font-size: 16px;
+  color: $white;
+  line-height: 24px;
+}
+
+%bodyBold {
+  @extend %whiteBold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%bodySemiBold {
+  @extend %whiteSemiBold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%h2Bold {
+  @extend %whiteBold;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+%h1Bold {
+  @extend %whiteBold;
+  font-size: 64px;
+  line-height: 80px;
+}

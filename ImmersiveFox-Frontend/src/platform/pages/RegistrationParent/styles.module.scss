@@ -1,0 +1,45 @@
+@import "../../../scss/vars.scss";
+@import "../../../scss/repeat.scss";
+
+.signup_left {
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.signup_right {
+     background: linear-gradient(
+      236.19deg,
+      #ffb800 -32.3%,
+      rgba(255, 168, 0, 0) 82.88%
+    ),
+    #fe6338;
+    clip-path: polygon(9% 0, 100% 0%, 100% 100%, 0 100%);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding-left: 180px;
+    text-align: start;
+
+    h1 {
+        @extend %whiteBold;
+        font-size: 56px;
+        line-height: 70px;
+        width: 85%;
+    }
+    h4 {
+        font-size: 24px;
+        color: #ffffff;
+    }
+    h5 {
+        font-size: 16px;
+        color: $white8;
+        line-height: 24px;
+        width: 85%;
+    }
+    p {
+        font-size: 14px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}

@@ -1,0 +1,154 @@
+@import "../scss/vars.scss";
+@import "../scss/repeat.scss";
+
+html {
+  box-sizing: border-box;
+  a, button {
+    text-transform: none !important;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #383C44;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+div {
+  outline: none;
+}
+
+body {
+  background-color: $black;
+  font-family: $poppins;
+  font-weight: 400;
+  color: $white;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container__big {
+  width: 100%;
+  max-width: 1720px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+.slick-list {
+  margin: 0 -20px;
+}
+.client .slick-slide > div {
+  margin: 0;
+}
+.client .slick-list {
+  margin: 0;
+}
+
+.fullSize {
+  @extend %full;
+}
+
+.blurMain {
+  filter: blur(100px);
+}
+
+.main__dots {
+  display: flex !important;
+  align-items: center;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  li {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  button {
+    @extend %button;
+    width: 4px;
+    height: 4px;
+    background-color: $dot;
+    border-radius: 50%;
+    font-size: 0;
+    transition: all 0.2s ease;
+  }
+  .slick-active button {
+    transform: scale(2);
+    background-color: $orange;
+  }
+}
+
+.Toastify__toast {
+  background-color: $black;
+  color: $white;
+}
+.Toastify__close-button {
+  color: $white;
+}
+
+.immersive {
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .slick-list {
+    margin: 0 -20px;
+  }
+}
+
+.slick-slide {
+  height: auto;
+}
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.jobs__slaider .slick-slide > div {
+  height: 100%;
+}

@@ -1,0 +1,50 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.dev {
+  width: 300px;
+  height: 308px;
+  padding: 32px 35px;
+  background-color: $white1;
+  border-radius: 32px;
+  @extend %flexColumn;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+
+  &__photo {
+    width: 96px;
+    min-height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    img {
+      @extend %full;
+      object-fit: cover;
+    }
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 16px;
+    color: $white8;
+    line-height: 24px;
+    white-space: pre-wrap;
+  }
+}
+
+@media (max-width: 680px) {
+  .dev {
+    padding: 20px 30px;
+    margin: auto;
+  }
+}

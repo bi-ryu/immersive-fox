@@ -1,0 +1,70 @@
+@import "../../../scss/repeat.scss";
+@import "../../../scss/vars.scss";
+
+.clients {
+  width: 100%;
+  padding: 160px 0 150px;
+  h5 {
+    font-size: 16px;
+    color: $white8;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    br {
+      display: none;
+    }
+  }
+}
+.client {
+  position: relative;
+  max-width: 290px;
+  height: 110px;
+  pointer-events: none;
+  img {
+    position: absolute;
+    @extend %center;
+    @extend %full;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .clients {
+    padding: 60px 0;
+  }
+  .client {
+    padding: 0 20px;
+    img {
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .clients {
+    padding: 40px 0;
+    h5 {
+      margin-bottom: 24px;
+      br {
+        display: block;
+      }
+    }
+  }
+  .client {
+    max-width: 200px;
+    min-width: 200px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 400px) {
+  .client {
+    max-width: 180px;
+    min-width: 180px;
+    height: 90px;
+  }
+}

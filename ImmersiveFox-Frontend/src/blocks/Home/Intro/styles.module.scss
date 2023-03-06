@@ -1,0 +1,99 @@
+@import "../../../scss/repeat.scss";
+@import "../../../scss/vars.scss";
+
+.intro {
+  padding-top: 56px;
+  margin-bottom: -140px;
+  &__wrapper {
+    @extend %flexColumn;
+    align-items: center;
+  }
+  &__content {
+    width: 1010px;
+    @extend %flexColumn;
+    align-items: center;
+    margin: 0 auto 60px;
+    &Btn {
+      margin-top: 40px;
+    }
+  }
+
+  &__benefits {
+    position: relative;
+    z-index: 5;
+    width: 1070px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 24px;
+    border: 8px solid $white;
+    img {
+      @extend %full;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+  }
+
+  &__slaider {
+    position: relative;
+    z-index: 5;
+    margin-top: -40px;
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .intro {
+    &__benefits {
+      width: 900px;
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .intro {
+    &__content {
+      width: 850px;
+    }
+    &__benefits {
+      width: 850px;
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .intro {
+    &__content {
+      width: 100%;
+    }
+    &__benefits {
+      width: 730px;
+      height: 420px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .intro {
+    padding-top: 24px;
+    margin-bottom: -170px;
+    &__content {
+      margin-bottom: 24px;
+      &Btn {
+        margin-top: 16px;
+      }
+    }
+    &__slaider {
+      display: block;
+    }
+    &__benefitItems {
+      display: none;
+    }
+    &__benefits {
+      width: 100%;
+      height: auto;
+      border-width: 2px;
+    }
+  }
+}

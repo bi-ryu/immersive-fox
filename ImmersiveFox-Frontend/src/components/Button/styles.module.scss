@@ -1,0 +1,77 @@
+@import "../../scss/repeat.scss";
+@import "../../scss/vars.scss";
+
+.button {
+  @extend %alignCenter;
+  @extend %button;
+  background-color: transparent;
+  &:hover {
+    .button__title {
+      background-color: $darkOrange;
+      border-color: $darkOrange;
+    }
+    .button__icon {
+      background-color: $darkOrange;
+    }
+  }
+
+  &.fullOrange &__title {
+    background-color: $orange;
+  }
+  &.fullOrange:hover {
+    .button__title {
+      background-color: $darkOrange;
+      border-color: $darkOrange;
+    }
+    .button__icon {
+      background-color: $darkOrange;
+    }
+  }
+
+  &.fullDark {
+    .button__title {
+      background-color: $black;
+      border: 1px solid $black;
+    }
+    .button__icon {
+      background-color: $black;
+    }
+  }
+
+  &.emptyDark {
+    .button__title {
+      background-color: transparent;
+      border: 1px solid $black;
+      transition: all 0.2s ease;
+    }
+    .button__icon {
+      background-color: $black;
+    }
+    &:hover .button__title {
+      background-color: $black;
+    }
+  }
+
+  &__title {
+    padding: 11px 30px;
+    border: 1px solid $orange;
+    border-radius: 8px 0px 0px 8px;
+    @extend %whiteBold;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all 0.2s ease;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    background-color: $orange;
+    @extend %flexCenter;
+    border-radius: 0px 8px 8px 0px;
+    margin-left: 2px;
+    transition: all 0.2s ease;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

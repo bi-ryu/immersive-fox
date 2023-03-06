@@ -1,0 +1,20 @@
+@import "../../../scss/repeat.scss";
+@import "../../../scss/vars.scss";
+
+.intro {
+  padding: 56px 0 80px;
+  background-color: $black;
+  &__content {
+    width: 775px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    padding: 36px 0 40px;
+    &__content {
+      width: 100%;
+    }
+  }
+}
